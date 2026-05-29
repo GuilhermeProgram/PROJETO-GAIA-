@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaia – Equipe</title>
+  <link rel="stylesheet" href="{% static 'css/contato.css' %}"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- BARRA DE NAVEGAR -->
+<nav>
+  <img src="{% static 'Imagens/GAIA LOGO.png' %}" alt="Equipe Gaia" onerror="this.style.display='none'"/>
+  <ul>
+    <li><a href="/index/" class="ativo">Historia</a></li>
+    <li><a href="/Apresentação/">Projetos</a></li>
+    <li><a href="/equipe/">Equipe</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <h1>Entre em <span>contato</span></h1>
+    <p class="descricao"> A Gaia Soluções Sustentáveis acredita que pequenas ações geram grandes transformações. Entre em contato conosco para parcerias, projetos, dúvidas ou ações ambientais.</p>
+  </div>
+</section>
+
+<section class="contato-cards">
+    <div class="card-contato">
+        <h3>Telefone</h3>
+        <p>(21) 99177-1602</p>
+    </div>
+
+    <div class="card-contato">
+        <h3>E-mail</h3>
+        <p>solucoesdegaia@gmail.com</p>
+    </div>
+
+    <div class="card-contato">
+        <h3>Localização</h3>
+        <p>Itaipuaçu, Maricá - RJ</p>
+    </div>
+</section>
+
+<section class="formulario-section">
+    <div class="formulario-box">
+        <h2>Envie uma mensagem</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <input type="text" name="assunto" placeholder="Assunto" required>
+            <textarea name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+            <button class="btn-verde">Enviar mensagem</button>
+        </form>
+    </div>
+</section>
+
+<section class="info-extra">
+    <div class="info-box">
+        <h3>CNPJ</h3>
+        <p>43.444.088/0001-43</p>
+    </div>
+    <div class="info-box">
+        <h3>Razão Social</h3>
+        <p>GAIA SOLUÇÕES SUSTENTÁVEIS</p>
+    </div>
+    <div class="info-box">
+        <h3>Facebook</h3>
+        <a href="https://www.facebook.com/gaiasolucoessustentaveis/" target="_blank">Acessar página</a>
+    </div>
+</section>
+
+
+<!-- FINAL DA PAGINA  -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="f-logo">Gaia</div>
+      <p>Soluções socioambientais que geram impacto positivo nas pessoas e no planeta.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="historia.html">Nossa História</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <p>📞 (21) 9999-0000</p>
+      <p>✉ gaiasoluções@gmail.com</p>
+      <p>📍 Itaipuaçu, Maricá – RJ</p>
+      <p>🌐 Gaia Soluções Sustentáveis</p>
+    </div>
+    <div class="footer-col">
+      <h5>Siga a Gaia</h5>
+      <p>Acompanhe nossas ações e fique por dentro das novidades.</p>
+      <div class="footer-social">
+        <a href="#">ig</a>
+        <a href="#">fb</a>
+        <a href="#">wa</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2024 Gaia Soluções Sustentáveis. Todos os direitos reservados.</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

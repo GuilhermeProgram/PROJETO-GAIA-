@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaia – Projetos</title>
+  <link rel="stylesheet" href="{% static 'css/projetos.css' %}"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- BARRA DE NAVEGAÇÃO -->
+<nav>
+  <img src="{% static 'Imagens/GAIA LOGO.png' %}" alt="Equipe Gaia" onerror="this.style.display='none'"/>
+  <ul>
+    <li><a href="/" class="ativo">Historia</a></li>
+    <li><a href="/Apresentação/">Projetos</a></li>
+    <li><a href="/equipe/">Equipe</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <h1>Transformando<br>ideias em <span>impacto</span></h1>
+    <p class="descricao">Na Gaia, cada projeto nasce de um propósito e se concretiza em soluções que geram impacto positivo para o meio ambiente e para as pessoas.</p>
+    <button class="btn-verde">✔ Conheça nossos projetos</button>
+    <div class="hero-stats">
+      <div class="stat-badge">♻ +500 Alunos atendidas</div>
+      <div class="stat-badge">🌿 +4 projetos ativos</div>
+      <div class="stat-badge">📍 Maricá, RJ</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="{% static 'Imagens/Nossa Atuação (3).png' %}" alt="Equipe em projeto" onerror="this.style.background='#1a3a1a';this.removeAttribute('src')"/>
+    <svg class="leaf-overlay" viewBox="0 0 60 80">
+      <path d="M30 2 C10 20 2 50 30 78 C58 50 50 20 30 2Z" fill="#4caf50"/>
+    </svg>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section class="projetos-section">
+  <h2>Projetos</h2>
+
+  <!-- Projeto 1 -->
+  <div class="projeto-destaque">
+    <img class="proj-foto" src="{% static 'Imagens/Nossa Atuação (7).png' %}" alt="Gerenciamento de resíduos" onerror="this.style.background='#a5d6a7';this.removeAttribute('src')"/>
+    <div class="proj-info">
+      <h3>Gerenciamento de resíduos sólidos</h3>
+      <p>Atuamos na gestão responsável de resíduos sólidos por meio de educação ambiental e conscientização comunitária em Maricá. Nossas iniciativas incluem:</p>
+      <ul>
+        <li>Projetos com escolas e comunidades</li>
+        <li>Ações de educação ambiental</li>
+        <li>Mobilização e compostagem</li>
+        <li>Parcerias e incentivos e mobilização</li>
+      </ul>
+      <a href="#" class="link-saiba">Saiba mais</a>
+    </div>
+    <!-- Folha decorativa -->
+    <svg class="leaf-between" viewBox="0 0 60 80">
+      <path d="M30 2 C10 20 2 50 30 78 C58 50 50 20 30 2Z" fill="#2e7d32"/>
+    </svg>
+  </div>
+
+  <!-- Projeto 2 -->
+  <div class="projeto-destaque">
+    <div class="proj-info" style="padding-left:28px">
+      <h3>Conhecimento ambiental que gera mudança</h3>
+      <p>Desenvolvemos programas de educação ambiental voltados para menores, comunidades e participação comunitária:</p>
+      <ul>
+        <li>Educação ambiental contínua</li>
+        <li>Mobilização comunitária</li>
+        <li>Práticas sustentáveis no dia a dia</li>
+        <li>Conscientização desde 2019</li>
+      </ul>
+      <a href="#" class="link-saiba">Saiba mais</a>
+    </div>
+    <img class="proj-foto" src="{% static 'Imagens/Nossa Atuação (4).png' %}" alt="Conhecimento ambiental" onerror="this.style.background='#c8e6c9';this.removeAttribute('src')"/>
+  </div>
+</section>
+
+<!-- OUTROS PROJETOS -->
+<section class="outros-section">
+  <h2>Outros projetos</h2>
+  <div class="outros-grid">
+
+    <div class="outro-card">
+      <img class="outro-foto" src="{% static 'Imagens/Nossa Atuação (5).png' %}" alt="Valorização de Resíduos" onerror="this.style.background='#a5d6a7';this.removeAttribute('src')"/>
+      <div class="outro-body">
+        <h3>Valorização de Resíduos</h3>
+        <p>Gestão responsável e soluções criativas para resíduos que geram valor local e impacto positivo.</p>
+        <a href="#" class="link-saiba">Saiba mais</a>
+      </div>
+    </div>
+
+    <div class="outro-card">
+      <img class="outro-foto" src="{% static 'Imagens/Nossa Atuação (3).png' %}" alt="Fortalecimento Comunitário" onerror="this.style.background='#c8e6c9';this.removeAttribute('src')"/>
+      <div class="outro-body">
+        <h3>Fortalecimento Comunitário</h3>
+        <p>Projetos que promovem acesso, renda e protagonismo social dentro das comunidades locais.</p>
+        <a href="#" class="link-saiba">Saiba mais</a>
+      </div>
+    </div>
+
+    <div class="outro-card">
+      <img class="outro-foto" src="{% static 'Imagens/Nossa Atuação (1).png' %}" alt="Educação Ambiental" onerror="this.style.background='#dcedc8';this.removeAttribute('src')"/>
+      <div class="outro-body">
+        <h3>Educação Ambiental</h3>
+        <p>Promovemos consciência ambiental por ações educativas em escolas, praças e espaços comunitários.</p>
+        <a href="#" class="link-saiba">Saiba mais</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PAGINA FINAL -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="f-logo">Gaia</div>
+      <p>Soluções socioambientais que geram impacto positivo nas pessoas e no planeta.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="historia.html">Nossa História</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <p>📞 (21) 99177-1602</p>
+      <p>✉ gaiasoluções@gmail.com</p>
+      <p>📍 Itaipuaçu, Maricá – RJ</p>
+      <p>🌐 Gaia Soluções Sustentáveis</p>
+    </div>
+    <div class="footer-col">
+      <h5>Siga a Gaia</h5>
+      <p>Acompanhe nossas ações e fique por dentro das novidades.</p>
+      <div class="footer-social">
+        <a href="#">ig</a>
+        <a href="#">fb</a>
+        <a href="#">wa</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2024 Gaia Soluções Sustentáveis. Todos os direitos reservados.</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaia – Equipe</title>
+  <link rel="stylesheet" href="{% static 'css/equipe.css' %}"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- BARRA DE NAVEGAR -->
+<nav>
+  <img src="{% static 'Imagens/GAIA LOGO.png' %}" alt="Equipe Gaia" onerror="this.style.display='none'"/>
+  <ul>
+    <li><a href="/" class="ativo">Historia</a></li>
+    <li><a href="/Apresentação/">Projetos</a></li>
+    <li><a href="/equipe/">Equipe</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <h1>Pessoas que <span>inspiram</span></h1>
+    <p class="subtitulo">Pessoas unidas pela sustentabilidade, movidas pelo propósito de transformar o amanhã.</p>
+    <p class="descricao">Nossa equipe é formada por pessoas comprometidas com a transformação social e a preservação ambiental. Unimos diferentes experiências e conhecimentos para desenvolver projetos positivos.</p>
+    <button class="btn-verde">Conheça a equipe</button>
+  </div>
+  <div class="hero-right">
+    <div class="hero-circle">
+      <img src="Foto-Equipe.png" alt="Equipe Gaia" onerror="this.style.display='none'"/>
+    </div>
+    <!-- folhas decorativas -->
+    <svg class="leaf-deco" style="right:-14px;top:-6px;width:50px" viewBox="0 0 60 80">
+      <path d="M30 2 C10 20 2 50 30 78 C58 50 50 20 30 2Z" fill="#2e7d32"/>
+    </svg>
+    <svg class="leaf-deco" style="right:-30px;top:10px;width:35px" viewBox="0 0 60 80">
+      <path d="M30 2 C10 20 2 50 30 78 C58 50 50 20 30 2Z" fill="#4caf50"/>
+    </svg>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="equipe-section">
+  <!-- folha de fundo decorativa -->
+  <svg style="position:absolute;left:20px;bottom:100px;width:80px;opacity:0.06" viewBox="0 0 60 80">
+    <path d="M30 2 C10 20 2 50 30 78 C58 50 50 20 30 2Z" fill="#2e7d32"/>
+  </svg>
+  <svg style="position:absolute;right:20px;top:100px;width:80px;opacity:0.06" viewBox="0 0 60 80">
+    <path d="M30 2 C10 20 2 50 30 78 C58 50 50 20 30 2Z" fill="#2e7d32"/>
+  </svg>
+
+  <h2>Conheça quem faz a Gaia acontecer</h2>
+
+  <div class="grid-3">
+    <!-- Simone -->
+    <div class="card-membro">
+      <img class="card-foto" src="{% static 'Imagens/Simone Duarte.png' %}" alt="Simone Duarte" onerror="this.style.background='#b2dfdb';this.removeAttribute('src')"/>
+      <div class="card-body">
+        <h3>Simone Duarte</h3>
+        <p class="card-cargo">Fundadora/Coordenadora Geral de Compostagem</p>
+        <p class="card-bio">Bacharel em Publicidade e Propaganda. Graduanda em Educação Ambiental, com foco na composição da natureza, empreendedorismo e gestão socioambiental e gestão de projetos.</p>
+        <div class="card-separator"></div>
+        <div class="card-social">
+          <a href="#" title="Instagram">ig</a>
+          <a href="#" title="LinkedIn">in</a>
+          <a href="#" title="WhatsApp">wa</a>
+        </div>
+      </div>
+    </div>
+    <!-- Felipe -->
+    <div class="card-membro">
+      <img class="card-foto" src="{% static 'Imagens/Felipe.Mattoso.png' %}" alt="Felipe Matheus" onerror="this.style.background='#c8e6c9';this.removeAttribute('src')"/>
+      <div class="card-body">
+        <h3>Felipe Matheus</h3>
+        <p class="card-cargo">Técnico/Supervisor de Compostagem</p>
+        <p class="card-bio">Bacharel em Publicidade e Propaganda, com experiência no gerenciamento de resíduos e adubo natural. Supervisor e gestor de qualidade e eficiência das compostagens.</p>
+        <div class="card-separator"></div>
+        <div class="card-social">
+          <a href="#" title="Instagram">ig</a>
+          <a href="#" title="LinkedIn">in</a>
+          <a href="#" title="WhatsApp">wa</a>
+        </div>
+      </div>
+    </div>
+    <!-- Ursula -->
+    <div class="card-membro">
+      <img class="card-foto" src="{% static 'Imagens/Ursula Brazil.png' %}" alt="Ursula Brazil" onerror="this.style.background='#dcedc8';this.removeAttribute('src')"/>
+      <div class="card-body">
+        <h3>Ursula Brazil</h3>
+        <p class="card-cargo">Consultora/Educadora Ambiental</p>
+        <p class="card-bio">Licenciada em Ciências Biológicas, Mestre em Ciências Biológicas, com especialização em Gestão de Biodiversidade.</p>
+        <div class="card-separator"></div>
+        <div class="card-social">
+          <a href="#" title="Instagram">ig</a>
+          <a href="#" title="LinkedIn">in</a>
+          <a href="#" title="WhatsApp">wa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <!-- Géorgia -->
+    <div class="card-membro">
+      <img class="card-foto" src="{% static 'Imagens/Georgia Rocha.jpg' %}" alt="Géorgia Rocha" onerror="this.style.background='#a5d6a7';this.removeAttribute('src')"/>
+      <div class="card-body">
+        <h3>Géorgia Rocha</h3>
+        <p class="card-cargo">Diretora de Projetos Sustentáveis</p>
+        <p class="card-bio">Engenheira Florestal com pós-graduação em Meio Ambiente e Gestão Ambiental, com experiência em compostagem e projetos socioambientais.</p>
+        <div class="card-separator"></div>
+        <div class="card-social">
+          <a href="#" title="Instagram">ig</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+    <!-- Dominique -->
+    <div class="card-membro">
+      <img class="card-foto" src="{% static 'Imagens/Dominique Candido' %}.jpg" alt="Dominique Cândido" onerror="this.style.background='#f0f4c3';this.removeAttribute('src')"/>
+      <div class="card-body">
+        <h3>Dominique Cândido</h3>
+        <p class="card-cargo">Assistente de Atendimento PcD</p>
+        <p class="card-bio">Atua promovendo acessibilidade, inclusão e a participação de pessoas com deficiência em todas as nossas iniciativas e projetos.</p>
+        <div class="card-separator"></div>
+        <div class="card-social">
+          <a href="#" title="Instagram">ig</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSSO JEITO DE ATUAR -->
+<section class="jeito-section">
+  <div class="jeito-inner">
+    <div class="jeito-intro">
+      <h3>Nosso jeito de atuar</h3>
+      <p>Acreditamos na força das pessoas e da comunidade. Trabalhamos com ética, transparência e respeito à diversidade para transformar realidades e inspirar um futuro sustentável.</p>
+    </div>
+    <div class="jeito-card">
+      <div class="jeito-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.8c.38-.95.8-1.9 1.3-2.85.5.28 1.03.54 1.58.77C12 20.6 17 17 17 12V8z"/></svg>
+      </div>
+      <h4>Propósito</h4>
+      <p>Tudo que fazemos nasce de um propósito claro e transformador.</p>
+    </div>
+    <div class="jeito-card">
+      <div class="jeito-icon">
+        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      </div>
+      <h4>Colaboração</h4>
+      <p>Valorizamos o trabalho em equipe e parcerias que multiplicam resultados.</p>
+    </div>
+    <div class="jeito-card">
+      <div class="jeito-icon">
+        <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+      </div>
+      <h4>Educação</h4>
+      <p>A educação ambiental é o alicerce de tudo que construímos.</p>
+    </div>
+    <div class="jeito-card">
+      <div class="jeito-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      </div>
+      <h4>Inclusão</h4>
+      <p>Promovemos a participação de todos, especialmente grupos vulneráveis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL DA PAGINA  -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="f-logo">Gaia</div>
+      <p>Soluções socioambientais que geram impacto positivo nas pessoas e no planeta.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="historia.html">Nossa História</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <p>📞 (21) 99177-1602</p>
+      <p>✉ gaiasoluções@gmail.com</p>
+      <p>📍 Itaipuaçu, Maricá – RJ</p>
+      <p>🌐 Gaia Soluções Sustentáveis</p>
+    </div>
+    <div class="footer-col">
+      <h5>Siga a Gaia</h5>
+      <p>Acompanhe nossas ações e fique por dentro das novidades.</p>
+      <div class="footer-social">
+        <a href="#">ig</a>
+        <a href="#">fb</a>
+        <a href="#">wa</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2024 Gaia Soluções Sustentáveis. Todos os direitos reservados.</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
