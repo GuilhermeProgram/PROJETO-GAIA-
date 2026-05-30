@@ -1,0 +1,185 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: #fff; color: #1a1a1a; }
+    a { text-decoration: none; color: inherit; }
+
+    /* PAGINA DE NAVEGAÇÃO */
+nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 64px; background: #fff; border-bottom: 1px solid #eee;
+    position: sticky; top: 0; z-index: 99;
+}
+.nav-logo-text { font-size: 1.7rem; font-weight: 800; color: #2e7d32; letter-spacing: 3px; font-style: italic; }
+nav ul { list-style: none; display: flex; gap: 40px; }
+nav ul a { font-size: 0.88rem; font-weight: 500; color: #333; transition: color .2s; }
+nav ul a:hover, nav ul a.ativo { color: #2e7d32; }
+
+    /* HERO */
+.hero {
+    display: flex; align-items: center; padding: 52px 64px;
+    background: #fff; gap: 40px; min-height: 320px;
+}
+.hero-left { flex: 1; }
+.hero-left h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.15; color: #1a1a1a; margin-bottom: 12px; }
+.hero-left h1 span { color: #4caf50; }
+.hero-left .subtitulo { font-size: 0.88rem; font-weight: 600; color: #333; margin-bottom: 10px; }
+.hero-left .descricao { font-size: 0.84rem; color: #555; line-height: 1.7; max-width: 460px; margin-bottom: 22px; }
+.btn-verde {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #2e7d32; color: #fff; font-size: 0.82rem; font-weight: 600;
+    padding: 10px 22px; border-radius: 20px; border: none; cursor: pointer; transition: background .2s;
+}
+.btn-verde:hover { background: #1b5e20; }
+.btn-verde::before { content: '●'; font-size: 0.6rem; }
+
+.hero-right { flex-shrink: 0; position: relative; }
+.hero-circle {
+    width: 250px; height: 250px; border-radius: 50%;
+    background: #c8e6c9; border: 5px solid #e8f5e9;
+    overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+.hero-circle img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* folha decorativa */
+.leaf-deco {
+    position: absolute; pointer-events: none; opacity: 0.25;
+}
+
+    /* SEÇÃO EQUIPE */
+.secao-equipe {
+    background: #f9fdf9;
+    padding: 52px 64px;
+}
+
+.secao-equipe h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.grid-equipe{
+    max-width: 1200px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    justify-content: center;
+    margin: 0 auto;
+}
+
+    /* card membro */
+.card-membro {
+    width: 320px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s;
+}
+.card-membro:hover { transform: translateY(-4px); }
+
+.membro-foto {
+    width: 100%; height: 320px; object-fit: cover;display: block;
+}
+
+.conteudo-membro { padding: 25px; }
+
+.conteudo-membro h2{
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.conteudo-membro h3{
+    color: #2e7d32;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.conteudo-membro p{
+    line-height: 1.7;
+}
+
+    /* linha separadora antes dos ícones sociais */
+.card-separator {
+    height: 1px; background: #eee; margin-bottom: 10px;
+}
+
+.card-social { display: flex; gap: 8px; }
+.card-social a {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: #e8f5e9; display: flex; align-items: center;
+    justify-content: center; font-size: 0.65rem; font-weight: 700;
+    color: #2e7d32; transition: background .2s;
+}
+.card-social a:hover { background: #2e7d32; color: #fff; }
+
+    /* NOSSO JEITO DE ATUAR */
+.jeito-section {
+    background: #fff;
+    padding: 52px 64px;
+}
+
+.jeito-inner {
+    background: #f1f8f1;
+    border-radius: 16px;
+    padding: 36px 32px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.jeito-intro h3 {
+    font-size: 0.82rem; font-weight: 600; color: #555; margin-bottom: 10px;
+}
+
+.jeito-intro p {
+    font-size: 0.8rem; color: #444; line-height: 1.6;
+}
+
+.jeito-card { text-align: center; }
+
+.jeito-icon {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: #2e7d32; display: flex; align-items: center;
+    justify-content: center; margin: 0 auto 10px;
+}
+.jeito-icon svg { width: 22px; height: 22px; fill: #fff; }
+
+.jeito-card h4 { font-size: 0.82rem; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+.jeito-card p { font-size: 0.75rem; color: #555; line-height: 1.5; }
+
+    /* FINAL DA PAGINA */
+footer { background: #1b5e20; padding: 44px 64px 28px; }
+.footer-inner {
+    display: grid; grid-template-columns: 2fr 1fr 1.4fr 1.4fr;
+    gap: 40px; margin-bottom: 28px;
+}
+.footer-brand .f-logo {
+    font-size: 1.5rem; font-weight: 800; font-style: italic;
+    color: #fff; letter-spacing: 3px; margin-bottom: 10px;
+}
+.footer-brand p { font-size: 0.78rem; color: rgba(255,255,255,.65); line-height: 1.6; max-width: 200px; }
+.footer-col h5 {
+    font-size: 0.78rem; font-weight: 700; color: #fff;
+    text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 7px; }
+.footer-col ul li a { font-size: 0.78rem; color: rgba(255,255,255,.65); transition: color .2s; }
+.footer-col ul li a:hover { color: #a5d6a7; }
+.footer-col p { font-size: 0.78rem; color: rgba(255,255,255,.65); margin-bottom: 6px; }
+.footer-social { display: flex; gap: 10px; margin-top: 12px; }
+.footer-social a {
+    width: 30px; height: 30px; border-radius: 50%;
+    background: rgba(255,255,255,.12); display: flex; align-items: center;
+    justify-content: center; color: #fff; font-size: 0.7rem; font-weight: 700;
+    transition: background .2s;
+}
+.footer-social a:hover { background: #4caf50; }
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.12); padding-top: 18px;
+    text-align: center; font-size: 0.72rem; color: rgba(255,255,255,.4);
+}

@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaia – Projetos</title>
+  <link rel="stylesheet" href="{% static 'css/projetos.css' %}?v=999"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- BARRA DE NAVEGAÇÃO -->
+<nav>
+  <img src="{% static 'Imagens/GAIA LOGO.png' %}" alt="Equipe Gaia" onerror="this.style.display='none'"/>
+  <ul>
+    <li><a href="/" class="ativo">Historia</a></li>
+    <li><a href="/Apresentação/">Projetos</a></li>
+    <li><a href="/equipe/">Equipe</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <h1>Transformando<br>ideias em <span>impacto</span></h1>
+    <p class="descricao">Na Gaia, cada projeto nasce de um propósito e se concretiza em soluções que geram impacto positivo para o meio ambiente e para as pessoas.</p>
+    <button class="btn-verde">✔ Conheça nossos projetos</button>
+    <div class="hero-stats">
+      <div class="stat-badge">♻ +500 Alunos atendidas</div>
+      <div class="stat-badge">🌿 +4 projetos ativos</div>
+      <div class="stat-badge">📍 Maricá, RJ</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="{% static 'Imagens/Nossa Atuação (3).png' %}" alt="Equipe em projeto" onerror="this.style.background='#1a3a1a';this.removeAttribute('src')"/>
+    <svg class="leaf-overlay" viewBox="0 0 60 80">
+      <path d="M30 2 C10 20 2 50 30 78 C58 50 50 20 30 2Z" fill="#4caf50"/>
+    </svg>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section class="projetos-section">
+  <h2>Projetos</h2>
+
+  {% for projeto in projetos %}
+
+  <div class="projeto-destaque">
+
+    <div class="imagem-projeto-area">
+      {% if projeto.foto %}
+      <img class="imagem-projeto"
+           src="{{ projeto.foto.url }}"
+           alt="{{ projeto.nome }}"
+      >
+
+    {% else %}
+      <div class="imagem-projeto sem-foto">
+      </div>
+    {% endif %}
+    </div>
+
+    <div class="info-projeto">
+
+      <h3>{{ projeto.nome }}</h3>
+
+      <p>{{ projeto.descricao }}</p>
+
+      <small>{{ projeto.data }}</small>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<!-- OUTROS PROJETOS -->
+<section class="outros-section">
+  <h2>Outros projetos</h2>
+  <div class="outros-grid">
+
+    <div class="outro-card">
+      <img class="outro-foto" src="{% static 'Imagens/Nossa Atuação (5).png' %}" alt="Valorização de Resíduos" onerror="this.style.background='#a5d6a7';this.removeAttribute('src')"/>
+      <div class="outro-body">
+        <h3>Valorização de Resíduos</h3>
+        <p>Gestão responsável e soluções criativas para resíduos que geram valor local e impacto positivo.</p>
+        <a href="#" class="link-saiba">Saiba mais</a>
+      </div>
+    </div>
+
+    <div class="outro-card">
+      <img class="outro-foto" src="{% static 'Imagens/Nossa Atuação (3).png' %}" alt="Fortalecimento Comunitário" onerror="this.style.background='#c8e6c9';this.removeAttribute('src')"/>
+      <div class="outro-body">
+        <h3>Fortalecimento Comunitário</h3>
+        <p>Projetos que promovem acesso, renda e protagonismo social dentro das comunidades locais.</p>
+        <a href="#" class="link-saiba">Saiba mais</a>
+      </div>
+    </div>
+
+    <div class="outro-card">
+      <img class="outro-foto" src="{% static 'Imagens/Nossa Atuação (1).png' %}" alt="Educação Ambiental" onerror="this.style.background='#dcedc8';this.removeAttribute('src')"/>
+      <div class="outro-body">
+        <h3>Educação Ambiental</h3>
+        <p>Promovemos consciência ambiental por ações educativas em escolas, praças e espaços comunitários.</p>
+        <a href="#" class="link-saiba">Saiba mais</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PAGINA FINAL -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="f-logo">Gaia</div>
+      <p>Soluções socioambientais que geram impacto positivo nas pessoas e no planeta.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navegação</h5>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="historia.html">Nossa História</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <p>📞 (21) 99177-1602</p>
+      <p>✉ gaiasoluções@gmail.com</p>
+      <p>📍 Itaipuaçu, Maricá – RJ</p>
+      <p>🌐 Gaia Soluções Sustentáveis</p>
+    </div>
+    <div class="footer-col">
+      <h5>Siga a Gaia</h5>
+      <p>Acompanhe nossas ações e fique por dentro das novidades.</p>
+      <div class="footer-social">
+        <a href="#">ig</a>
+        <a href="#">fb</a>
+        <a href="#">wa</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2024 Gaia Soluções Sustentáveis. Todos os direitos reservados.</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

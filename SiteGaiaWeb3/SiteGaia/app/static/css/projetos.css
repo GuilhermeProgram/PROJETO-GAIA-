@@ -1,0 +1,214 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: #fff; color: #1a1a1a; }
+    a { text-decoration: none; color: inherit; }
+
+    /* BARRA DE NAVEGAÇÃO */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 64px; background: #fff; border-bottom: 1px solid #eee;
+      position: sticky; top: 0; z-index: 99;
+    }
+    .nav-logo-text { font-size: 1.7rem; font-weight: 800; color: #2e7d32; letter-spacing: 3px; font-style: italic; }
+    nav ul { list-style: none; display: flex; gap: 40px; }
+    nav ul a { font-size: 0.88rem; font-weight: 500; color: #333; transition: color .2s; }
+    nav ul a:hover, nav ul a.ativo { color: #2e7d32; }
+
+    /* HERO */
+    .hero {
+      display: flex; align-items: center;
+      padding: 52px 64px; background: #fff; gap: 40px;
+    }
+    .hero-left { flex: 1; }
+    .hero-left h1 { font-size: 2.4rem; font-weight: 800; line-height: 1.15; color: #1a1a1a; margin-bottom: 14px; }
+    .hero-left h1 span { color: #4caf50; }
+    .hero-left .descricao { font-size: 0.84rem; color: #555; line-height: 1.7; max-width: 440px; margin-bottom: 22px; }
+
+    .btn-verde {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #2e7d32; color: #fff; font-size: 0.82rem; font-weight: 600;
+      padding: 10px 22px; border-radius: 20px; border: none; cursor: pointer; transition: background .2s;
+    }
+    .btn-verde:hover { background: #1b5e20; }
+
+    /* STATUS */
+    .hero-stats { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+    .stat-badge {
+      background: #e8f5e9; border-radius: 20px;
+      padding: 7px 16px; font-size: 0.78rem; font-weight: 600; color: #2e7d32;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    .hero-right {
+      flex-shrink: 0; width: 320px; height: 240px;
+      border-radius: 16px; overflow: hidden; background: #1a1a1a; position: relative;
+    }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; }
+    /* Folha decorativa em cima da imagem */
+    .hero-right .leaf-overlay {
+      position: absolute; top: -10px; left: -10px; width: 60px; opacity: 0.4; pointer-events: none;
+    }
+
+    /* ── SEÇÃO PROJETOS ── */
+    .projetos-section {
+      background: #f9fdf9;
+      padding: 52px 64px;
+    }
+
+    .projetos-section > h2 {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2e7d32;
+      margin-bottom: 32px;
+    }
+
+    /* card de projeto destaque — foto esquerda, texto direita */
+.projeto-destaque {
+    display: flex;
+    align-items: stretch;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.imagem-projeto-area{
+    flex: 0 0 420px;
+    height: 320px;
+
+    background: #dcefdc;
+}
+
+.imagem-projeto{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+.sem-foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.info-projeto{
+    flex: 1;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+.info-projeto h3{
+    font-size: 2rem;
+    margin-bottom: 18px;
+    line-height: 1.2;
+}
+
+.info-projeto p{
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.info-projeto p, .info-projeto h3{
+    word-break: break-word;
+}
+
+.info-projeto small{
+    color: #2e7d32;
+    font-weight: 700;
+}
+
+    /* Folha decorativa entre projetos */
+    .leaf-between {
+      position: absolute;
+      right: -10px; bottom: -20px;
+      width: 55px; opacity: 0.15; pointer-events: none;
+    }
+
+    /* ── OUTROS PROJETOS ── */
+    .outros-section {
+      background: #fff;
+      padding: 52px 64px;
+    }
+
+    .outros-section h2 {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2e7d32;
+      margin-bottom: 28px;
+    }
+
+    .outros-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .outro-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .outro-card:hover { box-shadow: 0 6px 20px rgba(46,125,50,.12); transform: translateY(-2px); }
+
+    .outro-foto {
+      width: 100%; height: 140px; object-fit: cover;
+      background: #c8e6c9; display: block;
+    }
+
+    .outro-body { padding: 16px; }
+    .outro-body h3 { font-size: 0.88rem; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+    .outro-body p { font-size: 0.78rem; color: #555; line-height: 1.55; margin-bottom: 12px; }
+
+    /* PARTE FINAL DA PAGINA */
+    footer { background: #1b5e20; padding: 44px 64px 28px; }
+    .footer-inner {
+      display: grid; grid-template-columns: 2fr 1fr 1.4fr 1.4fr;
+      gap: 40px; margin-bottom: 28px;
+    }
+    .footer-brand .f-logo {
+      font-size: 1.5rem; font-weight: 800; font-style: italic;
+      color: #fff; letter-spacing: 3px; margin-bottom: 10px;
+    }
+    .footer-brand p { font-size: 0.78rem; color: rgba(255,255,255,.65); line-height: 1.6; max-width: 200px; }
+    .footer-col h5 {
+      font-size: 0.78rem; font-weight: 700; color: #fff;
+      text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 7px; }
+    .footer-col ul li a { font-size: 0.78rem; color: rgba(255,255,255,.65); transition: color .2s; }
+    .footer-col ul li a:hover { color: #a5d6a7; }
+    .footer-col p { font-size: 0.78rem; color: rgba(255,255,255,.65); margin-bottom: 6px; }
+    .footer-social { display: flex; gap: 10px; margin-top: 12px; }
+    .footer-social a {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: rgba(255,255,255,.12); display: flex; align-items: center;
+      justify-content: center; color: #fff; font-size: 0.7rem; font-weight: 700;
+      transition: background .2s;
+    }
+    .footer-social a:hover { background: #4caf50; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.12); padding-top: 18px;
+      text-align: center; font-size: 0.72rem; color: rgba(255,255,255,.4);
+    }
