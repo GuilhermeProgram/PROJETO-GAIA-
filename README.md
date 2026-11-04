@@ -25,19 +25,19 @@ Site institucional da **Gaia Soluções Sustentáveis**, iniciativa de Itaipuaç
 ## Estrutura
 
 ```
-SiteGaiaWeb3/SiteGaia/
+gaia-site/
 ├── manage.py
-├── projeto/          # configurações do Django (settings, urls, wsgi)
+├── config/           # configurações do Django (settings, urls, wsgi)
 └── app/
     ├── models.py     # MembrosEquipe, Projetos, Contato
     ├── views.py      # home, equipe, projetos, contato
     ├── urls.py       # rotas do site
     ├── admin.py      # configuração do painel administrativo
-    ├── templates/    # index, Apresentação, equipe, contato
+    ├── templates/    # index, projetos, equipe, contato
     └── static/       # CSS e imagens
 ```
 
-Os arquivos HTML na raiz do repositório são o protótipo estático inicial do site.
+A pasta `prototipo-estatico/` guarda o protótipo inicial do site, em HTML puro, sem Django.
 
 ## Modelo de dados
 
@@ -51,7 +51,7 @@ Pré-requisitos: Python 3.12 ou superior.
 
 ```bash
 git clone https://github.com/GuilhermeProgram/PROJETO-GAIA-.git
-cd PROJETO-GAIA-/SiteGaiaWeb3/SiteGaia
+cd PROJETO-GAIA-/gaia-site
 
 python -m venv .venv
 source .venv/bin/activate        # no Windows: .venv\Scripts\activate

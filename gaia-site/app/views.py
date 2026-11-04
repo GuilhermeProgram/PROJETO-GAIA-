@@ -4,7 +4,7 @@ import os
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from .models import Contato
-from projeto import settings
+from config import settings
 from .models import MembrosEquipe
 from .models import Projetos
 
@@ -23,7 +23,7 @@ def projetos(request):
 
     lista_projetos = Projetos.objects.all()
 
-    return render(request, 'Apresentação.html', {
+    return render(request, 'projetos.html', {
         'projetos': lista_projetos
     })
 
