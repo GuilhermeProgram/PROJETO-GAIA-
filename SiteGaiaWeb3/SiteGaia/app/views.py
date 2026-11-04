@@ -1,4 +1,6 @@
 from django.contrib.admindocs.utils import non_capturing_group_matcher
+import os
+
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from .models import Contato
@@ -52,7 +54,7 @@ Mensagem:
 {mensagem}
 ''',
             from_email=settings.EMAIL_HOST_USER,
-            recipient_list=['ygorbgomes@gmail.com'],
+            recipient_list=[os.environ.get('CONTACT_RECIPIENT', settings.EMAIL_HOST_USER)],
             fail_silently=False
         )
 
