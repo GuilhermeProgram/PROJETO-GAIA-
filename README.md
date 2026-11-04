@@ -81,7 +81,7 @@ Acesse `http://127.0.0.1:8000/` para o site e `http://127.0.0.1:8000/admin/` par
 - **Guilherme:** front-end. Páginas em HTML e estilos em CSS (Nossa História, Projetos, Equipe e Contato).
 - **Ygor:** back-end em Django (modelos, views, rotas, painel administrativo e envio de e-mail).
 - **Isis:** documentação do projeto.
-
+- **Claude Code - Somente renomeamento e organização de arquivos
 ## Próximos passos
 
 - Adicionar testes automatizados para as views e o formulário de contato.
